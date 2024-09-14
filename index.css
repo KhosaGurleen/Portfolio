@@ -1,3 +1,30 @@
+body {
+  background-color: #2c844e;
+
+}
+
+
+img {
+  border:  3px solid white;
+  border-radius: 5px;
+  width: 480px;
+  height: 400px;
+}
+
+
+td {
+  color: white;
+  text-align: center;
+  font-size: x-large;
+  font-family: 'Franklin Gothic Medium';
+  font-weight: bold;
+}
+
+a {
+  color: white;
+
+}
+
 li {
     display: inline;
   }
@@ -36,9 +63,10 @@ li {
     text-decoration: none;
   }
   
+
   /* Change the link color to #111 (black) on hover */
   li a:hover {
-    background-color: black;
+    background-color: 	#7fdf8d;
   }
 
   .active {
@@ -62,8 +90,8 @@ li {
   }
 
   ul {
-    border: 1px solid #e7e7e7;
-    background-color: rgb(26, 80, 26);
+
+    background-color: black;
   }
   
   li a {
