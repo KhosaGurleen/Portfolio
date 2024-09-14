@@ -1,0 +1,77 @@
+li {
+    display: inline;
+  }
+
+
+
+li {
+    border-right: 1px solid #bbbbbb;
+  }
+  
+  li:last-child {
+    border-right: none;
+  }
+
+  ul {
+    background-color: #dddddd;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+
+  .active {
+    background-color: #04AA6D;
+  }
+
+  /* Add a gray right border to all list items, except the last item (last-child) */
+li {
+    border-right: 1px solid #bbb;
+  }
+  
+  li:last-child {
+    border-right: none;
+  }
+
+
+  ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  ul {
+    border: 1px solid #e7e7e7;
+    background-color: #393737;
+  }
+  
+  li a {
+    color: #666;
+  }
+
+  ul {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
