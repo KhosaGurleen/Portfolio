@@ -1,6 +1,7 @@
 body {
-  background-color: black;
-}
+    background-color: black;
+  
+  }
 
 /* Navbar container */
 .navbar {
@@ -75,58 +76,37 @@ body {
 
 
 
-img {
-  display: flex;
-  width: 95%;
+
+
+
+
+
+
+
+h1 {
+    color: white;
 }
-
-
-td {
-  color: white;
-  text-align: center;
-  font-size: x-large;
-  font-family: 'Franklin Gothic Medium';
-  font-weight: bold;
-}
-
-
-.col {
-  background-color: white;
-  color: black;
-  opacity: 0.50;
-  text-align: center;
-  font-size: large;
-  font-weight: lighter;
-  font-family: 'Serif';
-  padding: 16px;
-}
-
-
-
-
-.anchor {
-a:link {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  color: rgb(173, 17, 124);
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:active {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-}
-
+  
+  .img1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 52%;
+  
+  }
+  
+  .img2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  
+  }
+  
+  td {
+    color: white;
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: bold;
+  }
