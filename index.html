@@ -5,24 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <title>Portfolio</title>
+    <style>
+  
+        @media only screen and (max-width: 455px){
+            body{
+  
+                background-color: black;
+            }
+            .boxes{
+                  flex-direction: column;
+              }
+        }
+        
+        /* @media not|only mediatype and (expressions) {
+            CSS-Code;
+        } */
+              
+        .boxes{
+            display: flex;
+        }
+  
+    </style>
 </head>
-<div>
 <body>
+    <div class="boxes, ">
+    <div>
     <h1 style="color: white;">Portfolio&nbsp; - &nbsp;Gurleen Kaur Khosa</h1>
-    <ul>
-        <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="badges.html">Badges</a></li>
-    </ul>
+
+    <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">All Projects
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="Project 1 (Part 1).html">Project 1 (Part 1)</a>
+            <a href="Project 1 (Part 2).html">Project 1 (Part 2)</a>
+            <a href="Project 2 (UCW Domain).html">Project 2 (UCW Domain)</a>
+          </div>
+        </div>
+        <a href="certifications.html">Certifications</a>
+        <a href="badges.html">Badges</a>
+      </div>
+
     <br><br><br>
-    <table style="width: 100%; justify-items: center;">
+    <table>
+        <tr class="anchor">
+        <td style="color: white;"><a href="Project 1 (Part 1).html">Project 1 (Part 1)<br><br></a></td>
+        <td style="color: white;"><a href="Project 1 (Part 2).html">Project 1 (Part 2)<br><br></a></td>
+        <td style="color: white;"><a href="Project 2 (UCW Domain).html">Project 2 (UCW Domain)<br><br></a></td>
+        </tr>
         <tr>
-            <td width="33.3%"><a href="Project 1.html">Project 1<br><br><img src="Project 1.png"></a></td>
-            <td width="33.3%"><a href="Project 2.html">Project 2<br><br><img src="Project 2.png"></a></td>
-            <td width="33.3%"><a href="Project 2 Extension.html">Project 2 Extension<br><br><img src="Project 2 Extension.png"></a></td>
+            <td style="background-color: white;"><a href="Project 1 (Part 1).html"><img src="Project 1 (Part 2).png"></a></td>
+            <td style="background-color: white;"><a href="Project 1 (Part 2).html"><img src="Project 1 (Part 1).png"></a></td>
+            <td style="background-color: white;"><a href="Project 2 (UCW Domain).html"><img src="Project 2 (UCW Domain).png"></a></td>
+        </tr>
+        <tr>
+            <td class="col"><br><br><b>Description</b><br><br>
+            DAP Design and Implementation for City of Vancouver(Business Licences in Downtown Vancouver) - Part 1<br><br>
+            </td>
+            <td class="col"><b>Description</b><br><br>
+            DAP Design and Implementation for City of Vancouver(Business Licences in Downtown Vancouver) - Part 2
+            </td>
+            <td class="col"><b>Description</b><br><br>
+            Descriptive Analysis (Ethics Review Submission Rate)
+            </td>
         </tr>
     </table>
-</div>
-
-
+    </div>
+    </div>
 </body>
 </html>
