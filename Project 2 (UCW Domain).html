@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projectucw.css">
+    <title>Project 2: UCW Domain</title>
+    <style>
+
+      @media only screen and (max-width: 455px){
+          body{
+
+              background-color: black;
+          }
+          .boxes{
+                flex-direction: column;
+            }
+      }
+      
+      /* @media not|only mediatype and (expressions) {
+          CSS-Code;
+      } */
+            
+      .boxes{
+          display: flex;
+      }
+
+  </style>
+</head>
+<body>
+  <div class="boxes, ">
+    <h1>Project 2: UCW Domain</h1>
+
+    <div class="navbar">
+      <a href="index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">All Projects
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="Project 1 (Part 1).html">Project 1 (Part 1)</a>
+        <a href="Project 1 (Part 2).html">Project 1 (Part 2)</a>
+        <a href="Project 2 (UCW Domain).html">Project 2 (UCW Domain)</a>
+      </div>
+    </div>
+    <a href="certifications.html">Certifications</a>
+    <a href="badges.html">Badges</a>
+  </div>
+
+<div class="div">
+  <h2>&nbsp; &nbsp; Descriptive Analysis of UCW Research Ethics Policy</h2>
+&nbsp; &nbsp; <b>Project Description:</b> To review and ensure the ethical conduct of all research applications by Research Ethical Committee (REC) at UCW<br><br>
+&nbsp; &nbsp; <b>Project Title:</b> Descriptive Analysis (Ethics Review Submission Rate)<br><br>
+&nbsp; &nbsp; <b>Objective:</b> Measure the rate of ethics review submissions over a specific period.<br><br>
+&nbsp; &nbsp; <b>Purpose:</b> Provides a baseline understanding of how frequently research ethics reviews are submitted.<br><br>
+&nbsp; &nbsp; <b>Dataset:</b>Dummy dataset generated from chatGPT for 1 year (2024). The dataset includes the following key features:<br><br>
+<div>&nbsp; &nbsp; Student ID, First Name, Last Name, Date Of Birth, Gender, Email, Phone Number, Address, Application Date, Application Status, Applications Submitted
+</div><br>
+
+
+
+  <img class="img1" src="(UCW Domain) dataset.png" alt="Sorry for the Inconvenience">
+<br><br>
+
+&nbsp; &nbsp;<b>Methodology:</b><br><br>
+<ol class="ol">
+  <li><b>Step 1: Data Analytic Question Formulation:</b><br><br>
+        <ul  class="ul"><br>
+          <li>Descriptive Metric: Ethics Review Submission Rate</li>
+          <li>Diagnostic Metric: Reasons for Delayed Approvals</li>
+          <li>Predictive Metric: Anticipated Ethics Violations</li>
+          <li>Prescriptive Metric: Review Process Optimization Index</li>
+        </ul>
+    </li><br>
+    <img class="img1" src="(UCW Domain) step1.png" alt="Sorry for the Inconvenience"><br>
+  <li ><b>Step 2: Data Discovery</b><br><br>
+    Data discovery is about finding, understanding, and organizing data to set the stage for deeper analysis and informed decision-making. It involves data collection which means gathering data from various sources, such as databases, files, or external sources and then analyzing the collected data to understand its structure, quality, and content.<br><br>
+  <table>
+      <tr>
+        <td><img class="img2" src="(UCW Domain) step2.png" alt="Sorry for the Inconvenience"></td>
+        <td><img class="img2" src="(UCW Domain) step(UCW Domain) " alt="Sorry for the Inconvenience"></td>
+      </tr>
+  </table>
+  </li><br>
+  <li><b>Step 3: Data Storage Design</b><br><br>
+    In this step, we need to store our operational data in an analytical environment using S3 service in AWS. To do this, firstly, we need to create a bucket for our data storage in S3. Bucket is a place where we store objects and object could be anything be it excel file, pdf, image, json file etc.
+          <ul class="ul"><br>
+            <li>Bucket Created: academics-researchethics-gurleen</li>
+            <li>Organize by year: Inside the bucket, create folder for year ("2024/Landing")</li>
+            <li>Create folder for specific data: Within year 2024 folder, made more folders for different types of data, like “application records”, “approved delay logs”, “risk assessment records”, “historical violations”, “staff meetings”, “process efficiency metrics” inside the “landing folder”</li>
+          </ul><br>
+          Finally, uploaded the dataset files into those relevant folders. This helps keep data organized and easy to find later.
+          <br><br>
+          <table>
+            <tr>
+              <td><img class="img2" src="(UCW Domain) step3.png" alt="Sorry for the Inconvenience"></td>
+              <td><img class="img2" src="(UCW Domain) step3 (1).png" alt="Sorry for the Inconvenience"></td>
+            </tr>
+        </table>
+  </li><br>
+  <li><b>Step 4: Data Preparation</b><br><br>
+    Data Preparation is basically preparing or arranging your data from various sources to achieve your business goal which in my case was to review and ensure the ethical conduct of all research applications by Research Ethical Committee (REC) at UCW for year 2024.
+    <table>
+      <tr>
+        <td><img class="img2" src="(UCW Domain) step4.png" alt="Sorry for the Inconvenience"></td>
+        <td><img class="img2" src="(UCW Domain) step 4 (1).png" alt="Sorry for the Inconvenience"></td>
+      </tr>
+  </table><br><br>
+  </li>
+  <li><b>Step 5: Data Ingestion</b><br><br>
+    Data Ingestion involves uploading your data inside your AWS bucket in specific folders. As in my case, uploading my excel and pdf files into their relevant folders. For instance, application records.xlsx for Research Ethics Application Records folder of my academics bucket and so on.<br><br>
+    <table>
+      <tr>
+        <td><img class="img2" src="(UCW Domain) step5.png" alt="Sorry for the Inconvenience"></td>
+        <td><img class="img2" src="(UCW Domain) step5 (1).png" alt="Sorry for the Inconvenience"></td>
+      </tr>
+    </table><br>
+  </li>
+  <li><b>Step 6: Data Storage</b><br><br>
+    Data storage is an essential step in data analytics platforms. It involves storing the collected data into folders of S3 buckets for efficient access and analysis. After gathering data from open data portal, it is then stored to the landing environment of S3.<br><br>
+    <img class="img1" src="(UCW Domain) step6.png" alt="Sorry for the Inconvenience">
+  </li><br>
+  <li><b>Step 7: Data Pipeline Design</b><br><br>
+    The Data Pipeline design step is about planning how data will travel through the system, from where it starts to where it ends up. This includes deciding how data will be collected, processed, changed, and stored. The aim is to make sure data moves smoothly and is ready for analysis. I created visual representation of my ETL pipeline in draw.io using tables showing various stages of my design such as removing, filtering, extracting and grouping stage and then finally, reaching to my final outcome table showing “Application Submission Rate” calculations for year 2024.<br><br>
+    <table>
+      <tr>
+        <td><img class="img2" src="(UCW Domain) step7.png" alt="Sorry for the Inconvenience"></td>
+        <td><img class="img2" src="(UCW Domain) step7 (1).png" alt="Sorry for the Inconvenience"></td>
+      </tr>
+      <tr>
+        <td><img class="img2" src="(UCW Domain) step7 (2).png" alt="Sorry for the Inconvenience"></td>
+        <td><img class="img2" src="(UCW Domain) step7 (3).png" alt="Sorry for the Inconvenience"></td>
+      </tr>
+  </table><br><br>
+  </li>
+  <li><b>Step 8: Data Cleaning</b><br><br>
+    In this step cleaned up the dataset of business licences application records in an AWS S3 bucket. The steps involve creating raw folder inside landing zone and and then using a data cleaning tool called AWS Glue DataBrew, I created a project. The project then cleaned the data by removing invalid, null or missing values using function feature inside it depending upon the percentage of missing values in the column, which will ensure the accuracy of any future analysis performed on the data. If had more than 80% missing values, I dropped that column because it was of no use.<br><br>
+    <table>
+      <tr>
+        <td><img class="img2" src="(UCW Domain) step8.png" alt="Sorry for the Inconvenience"></td>
+        <td><img class="img2" src="(UCW Domain) step8 (1).png" alt="Sorry for the Inconvenience"></td>
+      </tr>
+    </table><br><br>
+  </li>
+  <li><b>Step 9: Data Structuring</b><br><br>
+    In this step, I arranged my data in structured manner meaning renamed columns names with relevant names with respect to the information they hold in them. Furthermore, I configured “Schema” in AWS Glue DataBrew to ensure whether my dataset had relevant datatypes for specific columns and if not changes them accordingly. Furthermore, I created and ran my job and stored the result of my cleaning and structuring inside the raw folder of my S3 bucket.<br><br>
+    <img class="img1" src="(UCW Domain) step9.png" alt="Sorry for the Inconvenience">
+      <br><br>
+  </li>
+  <li><b>Step 10: Data Pipeline Implementation</b><br><br>
+    This step involves creation of visual ETL using AWS Glue service. This step provides us with the summarized information for our analysis. In this step, I fetched data from my raw folder (cleaned and structured data) and then performed certain operations to that dataset to extract specific information. I used aggregation, filter and change schema to retrieve specific information from my dataset. Then I used to join function to group my dataset and performed average calculation on my dataset to get “Application Submission Rate” for year 2024 using columns “Number of submitted applications per year” and “Total number of applications initiated”.
+    Licence Issuance Rate = (Number of submitted applications per year/ Total number of applications initiated) *100
+    Finally, I run my job, and my results were stored in the curated folder of my S3 bucket.<br><br>
+    <table>
+      <tr>
+        <td><img class="img2" src="(UCW Domain) step10.png" alt="Sorry for the Inconvenience"></td>
+        <td><img class="img2" src="(UCW Domain) step10 (1).png" alt="Sorry for the Inconvenience"></td>
+      </tr>
+      <tr></tr>
+        <td colspan="2"><img class="img3" src="(UCW Domain) step10 (2).png" alt="Sorry for the Inconvenience"></td>
+      </tr>
+    </table><br><br>
+  </li>
+  <li><b>Step 11: Data Analysis</b><br><br>
+    The AWS service used for executing this step is Amazon Athena. This step involved analyzing the summarized curated folder data from S3 bucket by creating tables for specific CSV files. The table contained columns such as Year and ASR (Application Submission Rate) for the years 2023 and 2024. After table creation, I ran SQL queries to retrieve specific information from the table using SQL “ORDER BY”, “SELECT” and various other queries.<br><br>
+    <table>
+      <tr>
+        <td><img class="img2" src="(UCW Domain) step11.png" alt="Sorry for the Inconvenience"></td>
+        <td><img class="img2" src="(UCW Domain) step11 (1).png" alt="Sorry for the Inconvenience"></td>
+      </tr>
+    </table><br><br>
+  </li>
+  <li><b>Step 12: Data Visualization</b><br><br>
+    In this step, I created visualizations for my Athena downloaded data file for Submission Rate containing 2024 and 2023 data. I made my visualizations for this step in excel using recommended charts and then downloaded that file in pdf format and renamed it as Graph_Report.<br><br>
+    <img class="img1" src="(UCW Domain) step12.png" alt="Sorry for the Inconvenience">
+    <br><br>
+  </li>
+  <li><b>Step 13: Data Publishing</b><br><br>
+    AWS EC2 service was used to execute this step. This step involved publishing your data files to general and web servers to be accessible by the public. To do this step, I created two EC2 instances, one for general server and another one for web server. For connecting my instances, I used “Remote desktop connection” inbuild software in windows and uploaded my files to remote computer in analysis folder in C-Drive for general server and in wwwroot folder for web server and then using public IP address, I accessed my uploaded files on the web browser.<br><br>
+    <table>
+      <tr>
+        <td><img class="img2" src="(UCW Domain) step13.png" alt="Sorry for the Inconvenience"></td>
+        <td><img class="img2" src="(UCW Domain) step 13 (1).png" alt="Sorry for the Inconvenience"></td>
+      </tr>
+      <tr>
+        <td colspan="2"><img class="img3" src="(UCW Domain) step13 (2).png" alt="Sorry for the Inconvenience"></td>
+      </tr>
+    </table><br><br>
+  </li>
+</ol>
+&nbsp; &nbsp;This descriptive analysis project aims analyzing data on the number of applications submitted in UCW for research ethic reviews in year 2024.<br>
+</div>
+</body>
+</html>
