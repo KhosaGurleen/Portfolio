@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project 1 (part 2).css">
+    <title>Project 1: Business Licence (Part 2)</title>
+    <style>
+
+      @media only screen and (max-width: 455px){
+          body{
+
+              background-color: black;
+          }
+          .boxes{
+                flex-direction: column;
+            }
+      }
+      
+      /* @media not|only mediatype and (expressions) {
+          CSS-Code;
+      } */
+            
+      .boxes{
+          display: flex;
+      }
+
+  </style>
+</head>
+<body>
+  <div class="boxes, ">
+    <h1>Project 2: Busine(DAP Part 2) )</h1>
+
+    <div class="navbar">
+      <a href="index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">All Projects
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="Project 1 (Part 1).html">Project 1 (Part 1)</a>
+        <a href="Project 1 (Part 2).html">Project 1 (Part 2)</a>
+        <a href="Project 2 (UCW Domain).html">Project 2 (UCW Domain)</a>
+      </div>
+    </div>
+    <a href="certifications.html">Certifications</a>
+    <a href="badges.html">Badges</a>
+  </div>
+
+<div class="div">
+  <h2>&nbsp; &nbsp;Descriptive Analysis</h2>
+&nbsp; &nbsp;<b>Project Description:</b> Establishing AWS DAP for The City of Vancouver(Descriptive Analysis of Business licences issued per year)<br><br>
+&nbsp; &nbsp;<b>Project Title:</b> DAP Design and Implementation for City of Vancouver(Business Licences in Downtown Vancouver)<br><br>
+&nbsp; &nbsp;<b>Objective:</b> The City of Vancouver is in an advantageous place where the proper use of data can further improve decision-making, public services, and usage of resources. The establishment of the Data Analytic Platform (DAP) is essential for the city because it provides a foundation for the integration, processing, and visualization of a massive amount of data received from different sources. Through this platform, city officials can make the right decisions for the city's betterment by considering the analyzed data on the people’s quality of living, improved service delivery, and enhanced city planning.<br><br>
+&nbsp; &nbsp;<b>Dataset:</b>Business licences data retrieved from city of Vancouver (open data portal) for year 2024 and 2023. The dataset includes the following key features:<br><br>
+<div>&nbsp; &nbsp;RSN, Licence Number, Licence Revision Number, Business Name, Business Trade Name, Status, Issued Date	Expired Date, Business Type, Business SubType, Unit, Unit Type, House, Street, City, Province, Country, Postal Code, Local Area, Number of Employees, Fee Paid, Extract Date</div><br>
+
+
+
+  <img class="img2" src="(DAP Part 1) dataset.png" alt="Sorry for the Inconvenience">
+<br><br>
+
+&nbsp; &nbsp;<b>Methodology:</b><br><br>
+&nbsp; &nbsp;To be able to implement and migrate a data analytic platform of The City of Vancouver to the AWS, we have designed and implemented steps 15-17 below:<br><br>
+<b>Step 15: Data Protection</b><br><br>
+To ensure data protection, I implemented the following steps using AWS Key Management Service (KMS).
+<ul class="ul1">
+    <li>Create a Key</li>
+        <ul class="ul">
+            <li>Designed layout in draw.io.</li>
+            <li>Created a key for my domain: business-businesslicence-key-gurleen using KMS.</li>
+            <li>Defined key administrative permissions, assigning the LabRole to manage the key.</li>
+            <li>Granted permissions for key usage, allowing users with the LabRole to use the key for encryption.</li>
+        </ul>
+   <li>Block Public Access</li>
+        <ul class="ul">
+            <li>Blocked all public access to the bucket, ensuring only authorized users with specific roles and permissions can interact with the content.</li>
+        </ul>
+    <li>Configure Encryption</li>
+        <ul class="ul">
+            <li>Changed default encryption settings to use the created key for automatic encryption of newly uploaded datasets.</li>
+            <li>Enabled bucket versioning, allowing multiple versions of files to be stored for recovery or reference.</li>
+        </ul>
+    <li>Create a Backup Bucket</li>
+        <ul class="ul">
+            <li>Created a backup bucket: business-businesslicence-backup-gurleen</li>
+            <li>Set server-side encryption with AWS KMS keys (SSE-KMS) for added security.</li>
+            <li>Enabled bucket versioning to store multiple versions of files.</li>
+        </ul>
+    <li>Set up Replication Rule</li>
+        <ul class="ul">
+            <li>Created a replication rule to automatically copy files from the original bucket to the backup bucket.</li>
+            <li>Chose the original bucket, source bucket, and destination bucket.</li>
+            <li>Selected the LabRole IAM role and the created KMS key for encrypting destination objects.</li>
+        </ul>
+</ul>
+By following these steps, I ensured that data is protected with symmetric encryption, and multiple versions of files are stored for recovery or reference. The backup bucket provides an additional layer of security in case the original bucket is destroyed.<br><br>
+
+<table>
+    <tr>
+      <td><img class="img2" src="(DAP Part 2) Step 15.png" alt="Sorry for the Inconvenience"></td>
+      <td><img class="img2" src="(DAP Part 2) Step 15 (1).png" alt="Sorry for the Inconvenience"></td>
+    </tr>
+    <tr>
+      <td><img class="img2" src="(DAP Part 2) Step 15 (2).png" alt="Sorry for the Inconvenience"></td>
+      <td><img class="img2" src="(DAP Part 2) Step 15 (3).png" alt="Sorry for the Inconvenience"></td>
+    </tr>
+    <tr>
+      <td><img class="img2" src="(DAP Part 2) Step 15 (4).png" alt="Sorry for the Inconvenience"></td>
+      <td><img class="img2" src="(DAP Part 2) Step 15 (5).png" alt="Sorry for the Inconvenience"></td>
+    </tr>
+    <tr>
+        <td><img class="img2" src="(DAP Part 2) Step 15 (6).png" alt="Sorry for the Inconvenience"></td>
+        <td><img class="img2" src="(DAP Part 2) Step 15 (7).png" alt="Sorry for the Inconvenience"></td>
+      </tr>
+    <tr>
+        <td><img class="img2" src="(DAP Part 2) Step 15 (8).png" alt="Sorry for the Inconvenience"></td>
+        <td><img class="img2" src="(DAP Part 2) Step 15 (9).png" alt="Sorry for the Inconvenience"></td>
+     </tr>
+  </table><br><br>
+
+<b>Step 16: Data Governance</b><br><br>
+    In this step, to ensure data quality and privacy, I created a data governance process using AWS Glue. I set up a Virtual ETL job, Business-BusinessLicence-DQDP-Gurleen, which fetches raw data from an S3 bucket. The job checks the data for quality using a rule that ensures the LicenseStatus column is complete over 95%. The data is then routed based on the quality assessment, with high-quality data passing through to the next step using conditional router node which divides data into two categories – one being PassedGroup which contains all the records that exactly match with the filter condition and DataQualityEvaluationResult is marked as Passed. Another category of conditional router is default_group which contains records which failed the DataQualityEvaluationResult.
+    The job also ensures data privacy by detecting sensitive information, encrypting data at rest and in transit, and controlling access through permission settings and AWS KMS keys. This ensures that private data is protected and only accessible to authorized users, in compliance with privacy regulations.
+    The processed data is stored in an S3 bucket, business-businesslicence-trusted, in CSV format, without compression. This ensures that the data is available for further use or analysis. Finally, we run the job.<br><br>
+       
+    <table>
+        <tr>
+          <td><img class="img2" src="(DAP Part 2) Step 16.png" alt="Sorry for the Inconvenience"></td>
+          <td><img class="img2" src="(DAP Part 2) Step 16 (1).png" alt="Sorry for the Inconvenience"></td>
+        </tr>
+        <tr>
+          <td><img class="img2" src="(DAP Part 2) Step 16 (2).png" alt="Sorry for the Inconvenience"></td>
+          <td><img class="img2" src="(DAP Part 2) Step 16 (3).png" alt="Sorry for the Inconvenience"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><img class="img3" src="(DAP Part 2) Step 16 (4).png" alt="Sorry for the Inconvenience"></td>
+         </tr>
+      </table><br><br>
+
+<b>Step 17: Data Monitoring</b><br><br>
+    <b>Monitoring and Auditing with CloudWatch and CloudTrail</b><br>
+    To ensure data security and cost management, I set up monitoring with CloudWatch and audit logging with CloudTrail.<br>
+    Firstly, designed it in draw.io.<br><br>
+  
+    <b>Monitoring Cost and Storage Usage with CloudWatch</b><br>
+    To monitor the project's cost and storage usage, I created a dashboard that keep in check two metrics: EstimatedCharges and NumberOfObjects. The EstimatedCharges metric ensures time series of charges utilized in the project whereas NumberOfObjects used for specific service say Amazon S3 metric tracks the number of objects used in S3 over the last month. This setup enables me to monitor both cost and storage usage for my project. <br><br>
+    
+    <b>Configuring Alarms for Cost Management</b><br>
+    I created an alarm in CloudWatch to track the project's estimated charges and resource usage. The alarm is set to trigger within a time frame of 6 hours, when the EstimatedCharges is equal to or greater than $35. If this number is greater than specified threshold, then we will be notified about this via email so that we can take timely action if required to manage the budget of the project.<br><br>
+    <b>Configuring Alarm Notifications</b><br>
+    I configured alarm notifications and added my email address to get email notifications if my cost usage exceeds $35.<br><br>
+
+    <b>Monitoring AWS Resources with CloudTrail</b><br>
+    I created a new trail in CloudTrail named business-businesslicence-trail-gurleen, setting up a log bucket and folder, an AWS KMS alias, and enabling SSE-KMS encryption. This allows for continuous monitoring of all actions and changes regarding AWS resources, ensuring transparent and secure access to logs blocking unauthorized access to sensitive log data.<br><br>
+    <b>Benefits of Monitoring and Audit Logging</b><br>
+    By setting up monitoring with CloudWatch and audit logging with CloudTrail, I can track all activities and access within the AWS account. CloudWatch allows tracking usage, performance, and billing metrics, while CloudTrail provides a record of all actions and changes regarding AWS resources. Data security and cost management within the project can be ensured using these AWS services.
+     <br><br>
+
+     <table>
+        <tr>
+          <td><img class="img2" src="(DAP Part 2) Step 17.png" alt="Sorry for the Inconvenience"></td>
+          <td><img class="img2" src="(DAP Part 2) Step 17 (1).png" alt="Sorry for the Inconvenience"></td>
+        </tr>
+        <tr>
+          <td><img class="img2" src="(DAP Part 2) Step 17 (2).png" alt="Sorry for the Inconvenience"></td>
+          <td><img class="img2" src="(DAP Part 2) Step 17 (3).png" alt="Sorry for the Inconvenience"></td>
+        </tr>
+        <tr>
+          <td><img class="img2" src="(DAP Part 2) Step 17 (4).png" alt="Sorry for the Inconvenience"></td>
+          <td><img class="img2" src="(DAP Part 2) Step 17 (5).png" alt="Sorry for the Inconvenience"></td>
+        </tr>
+        <tr>
+            <td><img class="img2" src="(DAP Part 2) Step 17 (6).png" alt="Sorry for the Inconvenience"></td>
+            <td><img class="img2" src="(DAP Part 2) Step 17 (7).png" alt="Sorry for the Inconvenience"></td>
+          </tr>
+        <tr>
+            <td><img class="img2" src="(DAP Part 2) Step 17 (8).png" alt="Sorry for the Inconvenience"></td>
+            <td><img class="img2" src="(DAP Part 2) Step 17 (9).png" alt="Sorry for the Inconvenience"></td>
+        </tr>
+        <tr>
+            <td><img class="img2" src="(DAP Part 2) Step 17 (10).png" alt="Sorry for the Inconvenience"></td>
+            <td><img class="img2" src="(DAP Part 2) Step 17 (11).png" alt="Sorry for the Inconvenience"></td>
+        </tr>
+      </table><br><br> 
+
+    <h2 style="text-align: center;">DAP Architecture Analysis (Teamwork)</h2>
+	The City of Vancouver's architectural framework, which utilizes the Data Analytics Platform, is profoundly assessed and conforms to the AWS Well-Architected Framework. This assessment guarantees that the platform achieves key performance, security, reliability, cost efficiency, and sustainability indicators according to best practices and standards.
+    <ol>
+        <li class="ul3">Operational Efficiency</li>
+        Several advanced features of the AWS were used to enhance the operational efficiency of the DAP. First, adopting AWS Glue for the ETL pipeline in the DAP is a perfect example of how operational excellence was embraced. Its functioning is based on a clear organization of the tasks to define missing values in datasets and to control data flows. The design involved continual, incremental modifications that allowed designers to reverse mistakes and improve operations steadily and gradually. Consistency and moving forward were necessary, which is why an ETL pipeline to automate data cleaning operations has been created to enhance the operational tempo. 
+        The platform also uses AWS CloudWatch to monitor and alert, which is necessary to ensure the system runs smoothly. CloudWatch also has the provision of monitoring operational metrics continuously and using alarms that result in notification of actions when anomalies are detected. Furthermore, AWS Auto Scaling allows the system to automatically scale resources in response to real-time throughput requirements to accommodate fluctuating workloads. The Amazon Athena structure will enable users to query through big datasets without worrying about the data's size and additional costs, as the data processing is done on an as-needed basis as per the complexity of the query (Amazon Athena, 2024). Nonetheless, further research should identify failure situations for the S3 backups, improve the frequency of dataset transfers in case of unexpected situations, and simplify the dataset transfer process.<br><br>
+        <li class="ul3">Security</li>
+Security is one of the fundamental principles of the DAP that is ensured through a set of AWS services and measures needed to implement them. IAccess control is accomplished by applying the IAM, which controls each user’s identity and what they can do in the system. S3 server-side encryption (SSE) and AWS KMS help to secure all the data at rest to ensure that it is not contaminated if improperly accessed (Amazon Web Services, 2024). Also, the AWS CloudTrail tracks and keeps records of all API calls, thus providing a record of all activities on the AWS platform. This strategic security measure ensures the platform respects best practices in protecting information and upholds operations' integrity. This two-tier approach offers protection against theft of such data from unauthorized personnel. AWS CloudTrail offers more security features through the ability to capture each API call and all user interactions as a record where security compliance measures can be monitored and security threats detected (AWS CloudTrail, 2024). Nonetheless, some security factors, such as applying best practices across the layers, have not been considered. Future enhancements should also extend to stress testing related to the incident response plan, integrating additional measures for security event detection, investigation, and recovery into AWS CloudTrail in 2024.<br><br>
+        <li class="ul3">Performance Efficiency</li>
+Another essential characteristic of the DAP is its performance efficiency. Due to its reliance on AWS technology, Auto Scaling, and Amazon Athena are used to achieve optimal resource utilization and Big Data querying. It also uses AWS Glue DataBrew recipes for data quality and AWS KMS for encryption. However, the costs constrained these optimizations, and the adoption of serverless architectures or attempts at fine-tuning the configurations were restricted. Future enhancements could be made in geography to cover regional deployments and use serverless solutions for even better performance.<br><br>
+        <li class="ul3">Reliability</li>
+The reliability of the DAP is further supported by the use of Multi-Region Replication from Amazon S3, which copies data across many geographical regions. This feature minimizes the risks of data loss resulting from regional outages or disasters to make data and business progress available. Multi-region replication adds a layer of reliability by replicating data across regions and protecting against localized potential issues (Website Design Company in Bangalore, 2024). Nonetheless, the platform cannot automatically recover or perform horizontal scaling of servers, which is critical to enhancing the reliability and recoverability of the system. Further improvements should include the thorough checking of recovery processes, the usage of automation in recovery processes, and the horizontal extent of resources to exclude the single points of failures.<br><br>
+        <li class="ul3">Cost Optimization</li>
+AWS cost optimization is done using various AWS services where required. S3 Intelligent Tiering is smart as it moves seldom-accessed data to the more affordable storage tiers while ensuring that such data is accessible without incurring expenses (AWS, 2024). This inexpensive approach extends to using AWS Cost Explorer, where one can assess real-time usage and the amount spent on resources (AWS Cost Explorer, 2024). Checking the effectiveness of the work with the help of these indicators is possible through their periodic analysis. Therefore, the team can find and exclude waste, which must be a priority when working on the platform, to achieve the set goal and, at the same time, save money.  Still, utilizing other application-layer services, such as AWS SNS and AWS Cognito, will contribute to cost savings even more. Subsequent initiatives should center on procuring additional managed services and fine-tuning cost optimization strategies as the spread of the platform widens.<br><br>
+        <li class="ul3">Sustainability</li>
+Finally, sustainability is integrated into the DAP through serverless architectures and auto-scaling, which only utilize computing resources in a way that is required to reduce energy costs and consumption. AWS Lambda and all other services under the AWS business implement the notion of reserved compute capacity only for running applications, thereby minimizing wasted time and energy. It also manages to achieve efficiency by doing away with surplus resource consumption while adapting to changes in flow, thereby having a negligible impact on the environment.  The lack of server infrastructure in serverless architectures minimizes resource wastage through less or no use of servers. Auto-scaling means that resources are adjusted depending on the usage, which helps to avoid providing more resources than necessary and, consequently, less energy consumption. These practices help to decrease the negativity of their imprint on the environment by maintaining the conservative use of resources and the carbon emissions related to the functioning of the clouds (Amazon Web Services, 2024). However, its platform lacks fault tolerance and scalability features, which must be incorporated into further development plans. Optimizations should lie in defining what constitutes a backup instance and in preemptively adding infrastructure to sustain future growth and availability.<br>
+Thus, the Data Analytics Platform for the City of Vancouver proposes a comprehensive solution to meet performance, security, reliability, cost optimization, and sustainability challenges. Using the AWS Well-Architected Framework, the platform is created to efficiently satisfy present tasks and yet be ready to embrace future demands.<br>
+</div>
+</body>
+</html>
